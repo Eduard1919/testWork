@@ -1,0 +1,143 @@
+html {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    background-repeat: no-repeat;
+    font-weight: 400;
+    width: fit-content;
+}
+
+:root {
+    --background: #f5f5f5;
+    --white: #fff;
+    --header-shadow: #ced5d8;
+    --txt-grey: #B0B0B0;
+    --purple: #B89EFF;
+    --firm: #9873FF;
+    --dark-purple: #8052FF;
+    --red: #F06A4D;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    background-color: var(--background);
+    font-family: sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+}
+
+body.modal-active {
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    position: relative;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+.d-flex {display: flex;}
+.column {flex-direction: column;}
+.row {flex-direction: row;}
+.txt-gray {color: var(--txt-grey);}
+.txt-purple { color: var(--firm);}
+.header-reset {margin: 0;}
+.list-reset {
+    list-style: none;
+    padding-left: 0;
+}
+.input-reset {
+    border: none;
+    outline: none;
+    display: block;
+    padding: 0;
+}
+.btn-reset {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.secondary {
+    border: 1px solid var(--firm);
+    color: var(--firm);
+    transition: 0.2s ease-in-out;
+    transition-property: background-color color;
+}
+
+.secondary:hover,
+.secondary:focus {
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+.secondary:active {
+    background-color: var(--dark-purple);
+}
+
+.primary {
+    border: 1px solid var(--firm);
+    background-color: var(--firm);
+    color: var(--white);
+    transition: 0.2s ease-in-out;
+    transition-property: background-color color;
+}
+
+.primary:hover,
+.primary:focus {
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+.primary:active {
+    background-color: var(--dark-purple);
+}
+.darken {
+    transition: 0.2s opacity ease-in-out;
+    opacity: 0.5;
+}
+
+main {
+    margin: 0 auto;
+    width: 1024px;
+    padding-top: 50px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}

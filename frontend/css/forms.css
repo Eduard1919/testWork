@@ -1,0 +1,196 @@
+.popup-bg {
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 20;
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+
+.form-add {
+    background-color: var(--white);
+    width: 450px;
+    min-height: 400px;
+    padding: 27px 0 30px 0;
+    margin: 0 auto;
+    position: relative;
+}
+
+.form-add-title {
+    font-weight: 700;
+    padding-left: 30px;
+}
+
+.form-label {
+    position: relative;
+    margin-top: 41px;
+    width: 100%;
+    padding-left: 30px;
+}
+
+.form-label::before {
+    content: "";
+    position: absolute;
+    top: 130%;
+    width: 87%;
+    border: 1px solid;
+    border-color: #F4F3F6;
+}
+
+.form-add-label:nth-child(2) {
+    margin-top: 36px;
+}
+
+.form-input {
+    font-weight: 400;
+    font-size: 14px;
+    width: 100%;
+}
+
+.ast {
+    color: var(--firm);
+    position: absolute;
+    top: 0px;
+}
+
+.asterisk-S {
+    left: 94px;
+}
+
+.asterisk-N {
+    left: 59px;
+}
+
+.save-btn {
+    padding: 14px 33px 12.5px 35px;
+    letter-spacing: 0.3px;
+    margin: 26px auto 0;
+    font-size: 14px;
+}
+
+.cancel-btn {
+    margin: 7px auto 0;
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+.escape-btn {
+    position: absolute;
+    top: 20px;
+    right: 21px;
+}
+
+.delete-popup-bg {
+    padding-top: 243px;
+    position: absolute;
+    height: inherit;
+    width: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 20;
+    padding-bottom: 50px;
+}
+
+.form-delete {
+    background-color: var(--white);
+    width: 450px;
+    min-height: 215px;
+    padding: 24px 0 0 0;
+    margin: 0 auto;
+    position: relative;
+}
+
+.form-delete-title {
+    font-weight: 700;
+    padding-right: 22px;
+    margin: 0 auto;
+}
+
+.delete-form-txt {
+    max-width: 250px;
+    text-align: center;
+    margin-top: 18px;
+    line-height: 18px;
+    font-size: 14px;
+    margin: 15px auto 0;
+}
+
+.edit-popup-bg {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 20;
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+
+.form-edit {
+    background-color: var(--white);
+    width: 450px;
+    min-height: 400px;
+    padding: 26px 0 0 0;
+    margin: 0 auto;
+    position: relative;
+}
+
+.form-edit-title {
+    font-weight: 700;
+    padding-left: 29px;
+}
+
+.form-edit-id {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.form-edit-txt {
+    color: var(--txt-grey);
+    font-size: 10px;
+}
+
+.form-edit-label {
+    margin-top: 21px;
+}
+
+.form-edit-label:nth-child(2) {
+    margin-top: 18px;
+}
+
+.form-edit-label:nth-child(4) {
+    margin-top: 22px;
+}
+
+.form-edit-label::before {
+    top: 114%;
+}
+
+.form-edit-input {
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+}
+
+.form-edit-input:nth-child(2) {
+    margin-top: 5px;
+}
+
+.asterisk-edit-S {
+    left: 74px;
+    top: 2px;
+}
+
+.asterisk-edit-N {
+    left: 50px;
+    top: 2px;
+}

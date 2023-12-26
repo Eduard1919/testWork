@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/addNew.js" defer></script>
+  <script src="scripts/removeEdit.js" defer></script>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/table.css">
+  <link rel="stylesheet" href="css/forms.css">
+</head>
+
+<body>
+  <div class="container">
+    <main>
+      <h1 class="header-reset main-header">Клиенты</h1>
+      <table class="table">
+        <thead class="table-head">
+          <tr>
+            <th class="sorting txt-purple">ID</th>
+            <th class="sorting txt-gray">Последние изменения</th>
+            <th class="sorting txt-gray">Сумма</th>
+            <th class="sorting txt-gray">Примечание</th>
+            <th class="sorting txt-gray">Действия</th>
+          </tr>
+        </thead>
+        <tbody class="table-body master">
+          <!-- test client -->
+          <!-- <tr class="table-row">
+            <td class="table-element txt-gray">123455</td>
+            <td class="table-element">21.02.2021<span class="txt-gray time"> 12:41</span></td>
+            <td class="table-element">20000</td>
+            <td class="table-element">Примечание</td>
+            <td class="table-element">
+              <button class="edit-client-btn btn-reset">Изменить</button>
+              <button class="remove-client-btn btn-reset">Удалить</button>
+            </td> 
+          </tr> -->
+        </tbody>
+      </table>
+      <table class="table">
+        <thead class="table-head detail">
+          <tr>
+            <th class="sorting txt-purple">ID</th>
+            <th class="sorting txt-gray">Наименование 1</th>
+            <th class="sorting txt-gray">Наименование 2</th>
+            <th class="sorting txt-gray">Сумма</th>
+            <th class="sorting txt-gray">Действия</th>
+          </tr>
+        </thead>
+        <tbody class="table-body">
+        </tbody>
+      </table>
+      <div class="visually-hidden popup-bg">
+        <form class="form-add d-flex column">
+          <h2 class="header-reset form-add-title">
+            Новый клиент
+            <button class="btn-reset escape-btn add-escape-btn">
+              <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M16.2333 1.73333L15.2666 0.766664L8.49991 7.53336L1.73324 0.766696L0.766576 1.73336L7.53324 8.50003L0.766603 15.2667L1.73327 16.2333L8.49991 9.46669L15.2666 16.2334L16.2332 15.2667L9.46657 8.50003L16.2333 1.73333Z"
+                  fill="#B0B0B0" />
+              </svg>
+            </button>
+          </h2>
+          <label class="form-label form-add-label">
+            <input id="id" required placeholder="Номер" type="number" class="form-input input-reset">
+          </label>
+          <label class="form-label form-add-label">
+            <input id="first" required placeholder="Наименование 1" type="number" class="form-input input-reset">
+          </label>
+          <label class="form-label form-add-label">
+            <input id="second" required placeholder="Наименование 2" type="number" class="form-input input-reset">
+          </label>
+          <label class="form-label form-add-label">
+            <input id="note" placeholder="Примечание" type="text" class="form-input input-reset">
+          </label>
+          <button class="btn-reset primary save-btn add-new-person-js" type="submit">Сохранить</button>
+          <button class="btn-reset cancel-btn cancel-add-form">Отмена</button>
+        </form>
+      </div>
+      <div class="visually-hidden edit-popup-bg">
+        <form class="form-edit d-flex column">
+          <h2 class="header-reset form-edit-title">
+            Изменить данные
+            <button class="btn-reset escape-btn">
+              <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M16.2333 1.73333L15.2666 0.766664L8.49991 7.53336L1.73324 0.766696L0.766576 1.73336L7.53324 8.50003L0.766603 15.2667L1.73327 16.2333L8.49991 9.46669L15.2666 16.2334L16.2332 15.2667L9.46657 8.50003L16.2333 1.73333Z"
+                  fill="#B0B0B0" />
+              </svg>
+            </button>
+          </h2>
+          <label class="form-label form-add-label">
+            <input id="idE" placeholder="Номер" type="number" class="form-input input-reset">
+          </label>
+          <label class="form-label form-add-label">
+            <input id="firstE" placeholder="Наименование 1" type="number" class="form-input input-reset">
+          </label>
+          <label class="form-label form-add-label">
+            <input id="secondE" placeholder="Наименование 2" type="number" class="form-input input-reset">
+          </label>
+          <label class="form-label form-add-label">
+            <input id="noteE" placeholder="Примечание" type="text" class="form-input input-reset">
+          </label>
+          <button class="btn-reset primary save-btn" type="submit">Сохранить</button>
+        </form>
+      </div>
+      <div class="visually-hidden delete-popup-bg">
+        <form class="form-delete d-flex column">
+          <h2 class="header-reset form-delete-title">
+            Удалить клиента
+            <button class="btn-reset escape-btn delete-cancel-btn">
+              <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M16.2333 1.73333L15.2666 0.766664L8.49991 7.53336L1.73324 0.766696L0.766576 1.73336L7.53324 8.50003L0.766603 15.2667L1.73327 16.2333L8.49991 9.46669L15.2666 16.2334L16.2332 15.2667L9.46657 8.50003L16.2333 1.73333Z"
+                  fill="#B0B0B0" />
+              </svg>
+            </button>
+          </h2>
+          <span class="delete-form-txt">Вы действительно хотите удалить данного клиента?</span>
+          <button class="btn-reset primary save-btn delete-client-btn" type="submit">Удалить</button>
+          <button class="btn-reset cancel-btn delete-cancel-btn" type="button">Отмена</button>
+        </form>
+      </div>
+    </main>
+    <button class="secondary btn-reset get-form-btn">
+      <svg class="add-icon" width="23" height="16" viewBox="0 0 23 16" fill="#9873FF"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M14.5 8C16.71 8 18.5 6.21 18.5 4C18.5 1.79 16.71 0 14.5 0C12.29 0 10.5 1.79 10.5 4C10.5 6.21 12.29 8 14.5 8ZM5.5 6V3H3.5V6H0.5V8H3.5V11H5.5V8H8.5V6H5.5ZM14.5 10C11.83 10 6.5 11.34 6.5 14V16H22.5V14C22.5 11.34 17.17 10 14.5 10Z" />
+      </svg>
+      Добавить клиента
+    </button>
+  </div>
+</body>
+
+</html>
